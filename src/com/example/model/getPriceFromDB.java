@@ -38,20 +38,20 @@ public class getPriceFromDB {
 
 			for (int i = 0; i < temp_area.size(); i++) {
 
-				String query_low = "SELECT * FROM `simple_parking_fee` WHERE fee<=? AND taiwanArea = ?";
-				String query_mid = "SELECT * FROM `simple_parking_fee` WHERE fee<=? AND ?<=fee AND taiwanArea = ?";
-				String query_high = "SELECT * FROM `simple_parking_fee` WHERE fee>=? AND taiwanArea = ?";
+				String query_low = "SELECT * FROM `simple_parking_fee` WHERE fee<=? AND taiwanArea = ? AND fee>=0";
+				String query_mid = "SELECT * FROM `simple_parking_fee` WHERE fee<=? AND ?<=fee AND taiwanArea = ? AND fee>=0";
+				String query_high = "SELECT * FROM `simple_parking_fee` WHERE fee>=? AND taiwanArea = ? AND fee>=0";
 
-				PreparedStatement preparedStmt_low = connection.prepareStatement(query_low);				
+				PreparedStatement preparedStmt_low = connection.prepareStatement(query_low);
 				preparedStmt_low.setString(1, String.valueOf(low));
 				preparedStmt_low.setString(2, String.valueOf(temp_area.get(i)));
 
-				PreparedStatement preparedStmt_mid = connection.prepareStatement(query_mid);				
+				PreparedStatement preparedStmt_mid = connection.prepareStatement(query_mid);
 				preparedStmt_mid.setString(1, String.valueOf(low));
 				preparedStmt_mid.setString(2, String.valueOf(high));
 				preparedStmt_mid.setString(3, String.valueOf(temp_area.get(i)));
 
-				PreparedStatement preparedStmt_high = connection.prepareStatement(query_high);				
+				PreparedStatement preparedStmt_high = connection.prepareStatement(query_high);
 				preparedStmt_high.setString(1, String.valueOf(high));
 				preparedStmt_high.setString(2, String.valueOf(temp_area.get(i)));
 				///////////////////////////////////////////////////////
