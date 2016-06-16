@@ -57,10 +57,10 @@ public class ConnectionManager {
 		  	 
 		    // execute the preparedstatement
 		    preparedStmt.execute();
-		    System.out.println("插入完成");
+		    System.out.println("��摰��");
 	         
 	     } catch (SQLException e) {
-	    	 System.out.println("InsertToDB插入失敗");
+	    	 System.out.println("InsertToDB��憭望��");
 	    	 System.out.println(e.getMessage());
 	         return;
 	     } 
