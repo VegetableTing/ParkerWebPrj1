@@ -8,6 +8,10 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.LinkedHashSet;
 
+import com.example.model.CountObject.number_object;
+
+import java.util.*;
+
 public class getPriceFromDB {
 	ConnectionManager connectionManager;
 
@@ -73,8 +77,10 @@ public class getPriceFromDB {
 				res_low.close();
 				res_mid.close();
 				res_high.close();
-
-				arr.add(new CountObject(temp_area.get(i), low_count, mid_count, high_count));
+				
+				number_object t=new number_object(low_count, mid_count, high_count);
+					
+				arr.add(new CountObject(temp_area.get(i), t));
 
 			}
 			return arr;

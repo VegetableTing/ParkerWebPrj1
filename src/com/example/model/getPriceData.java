@@ -34,6 +34,8 @@ public class getPriceData extends HttpServlet {
 		//low_price = Integer.valueOf(request.getParameter("price_low"));
 		//high_price = Integer.valueOf(request.getParameter("price_high"));
 		response.setContentType("application/json; charset=utf-8");
+		// response.getWriter().append("Served at:
+		// ").append(request.getContextPath());
 		request.setCharacterEncoding("UTF-8");
 
 		Gson gson = new Gson();
