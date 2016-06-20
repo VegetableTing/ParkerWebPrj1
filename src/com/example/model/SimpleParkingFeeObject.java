@@ -3,20 +3,29 @@ package com.example.model;
 import com.example.model.*;
 
 public class SimpleParkingFeeObject {
-
+	private String id;
 	private String taiwanCity;
 	private String taiwanArea;
 	private String name;
 	private int fee;
 
-	public SimpleParkingFeeObject(String taiwanCity, String taiwanArea, String name, int fee) {
-
+	public SimpleParkingFeeObject(String id, String taiwanCity, String taiwanArea, String name, int fee) {
+		setId(id);
 		setTaiwanCity(taiwanCity);
 		setTaiwanArea(taiwanArea);
 		setName(name);
 		setFee(fee);
 
 	}
+	
+	public String getId() {
+		return this.id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
 
 	public String getTaiwanArea() {
 		return this.taiwanArea;

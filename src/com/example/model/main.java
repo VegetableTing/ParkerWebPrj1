@@ -13,10 +13,8 @@ public class main {
 
 	public static void main(String[] argv) {
 
-		ConnectionManager.openConnection();
-
-		SimpleParkingFeeObject object = new SimpleParkingFeeObject("�����", "銝魚��", "Times 銝魚����銵��", 80);
-		ConnectionManager.inserToDB(object);
+		GetAreaDataFromDB temp =new GetAreaDataFromDB();
+	
 
 		return;
 

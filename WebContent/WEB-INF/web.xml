@@ -10,13 +10,21 @@
 		<servlet-name>getPriceData</servlet-name>
 		<servlet-class>com.example.model.getPriceData</servlet-class>
 	</servlet>
-        <servlet>
+	 <servlet>
+		<servlet-name>getAreaData</servlet-name>
+		<servlet-class>com.example.model.GetAreaParking</servlet-class>
+	</servlet>
+     <servlet>
 		<servlet-name>getPieChart</servlet-name>
 		<servlet-class>com.example.model.getPieChart</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>getPriceData</servlet-name>
 		<url-pattern>/getPriceData.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>getAreaData</servlet-name>
+		<url-pattern>/getAreaParking.do</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>getPieChart</servlet-name>
@@ -26,6 +34,6 @@
 	
   <welcome-file-list>
 
-    <welcome-file>getPriceData.do</welcome-file>
+    <welcome-file>getAreaParking.do?id=220</welcome-file>
   </welcome-file-list>
 </web-app>
