@@ -1,8 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
   <display-name>ParkerWebPrj</display-name>
-  <welcome-file-list>
-    <welcome-file>getPieChart</welcome-file>
 
+  
+  
+  
+  
+    <servlet>
+		<servlet-name>getPriceData</servlet-name>
+		<servlet-class>com.example.model.getPriceData</servlet-class>
+	</servlet>
+        <servlet>
+		<servlet-name>getPieChart</servlet-name>
+		<servlet-class>com.example.model.getPieChart</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>getPriceData</servlet-name>
+		<url-pattern>/getPriceData.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>getPieChart</servlet-name>
+		<url-pattern>/getPieChart.do</url-pattern>
+	</servlet-mapping>
+	
+	
+  <welcome-file-list>
+
+    <welcome-file>getPriceData.do</welcome-file>
   </welcome-file-list>
 </web-app>

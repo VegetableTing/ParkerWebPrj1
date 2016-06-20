@@ -14,7 +14,7 @@ import com.google.gson.Gson;
 /**
  * Servlet implementation class getPriceFromDB
  */
-@WebServlet("/getPieChart")
+
 public class getPieChart extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
