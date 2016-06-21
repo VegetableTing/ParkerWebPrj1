@@ -34,6 +34,6 @@
 	
   <welcome-file-list>
 
-    <welcome-file>getAreaParking.do</welcome-file>
+    <welcome-file>getAreaParking.do?id=</welcome-file>
   </welcome-file-list>
 </web-app>

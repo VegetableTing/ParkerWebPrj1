@@ -29,11 +29,11 @@ public class GetAreaParking extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		
 		Gson gson = new Gson();
-		ArrayList<SimpleParkingFeeObject> ObjArray = new ArrayList<SimpleParkingFeeObject>();
+		ArrayList<SimpleParkingDataObject> ObjArray = new ArrayList<SimpleParkingDataObject>();
 
 
 		String theArea = request.getParameter("TaiwanArea");
-		String theId = request.getParameter("id");
+		String theId = request.getParameter("originalId");
 		if(theArea==null){theArea="板橋區";}
 		
 		if(theId==null){

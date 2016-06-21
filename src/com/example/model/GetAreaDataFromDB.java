@@ -24,12 +24,12 @@ public class GetAreaDataFromDB {
 		System.out.println("connectionManager");
 	}
 
-	public ArrayList<SimpleParkingFeeObject> getAreaDB(String area) {
-		ArrayList<SimpleParkingFeeObject> simpleArray = new ArrayList<SimpleParkingFeeObject>();
+	public ArrayList<SimpleParkingDataObject> getAreaDB(String area) {
+		ArrayList<SimpleParkingDataObject> simpleArray = new ArrayList<SimpleParkingDataObject>();
 		
 		try {
 		
-			String findString = "SELECT * FROM `simple_parking_fee` WHERE TaiwanArea=?";
+			String findString = "SELECT originalId, taiwanCity, taiwanArea, name, fee, TYPE , totalCar, totalMotor FROM  `simple_parking_data` WHERE TaiwanCity = '新北市' AND TaiwanArea = ?";
 
 			PreparedStatement preparedStmtFindTheArea = connection.prepareStatement(findString);
 			preparedStmtFindTheArea.setString(1,area );
@@ -37,7 +37,7 @@ public class GetAreaDataFromDB {
 			
 			while (resTheArea.next()) {
 				
-				SimpleParkingFeeObject theObj=new SimpleParkingFeeObject(resTheArea.getString(1), resTheArea.getString(2),resTheArea.getString(3),resTheArea.getString(4),Integer.valueOf(resTheArea.getString(5)));
+				SimpleParkingDataObject theObj=new SimpleParkingDataObject(resTheArea.getString(1), resTheArea.getString(2),resTheArea.getString(3),resTheArea.getString(4),Integer.valueOf(resTheArea.getString(5)),resTheArea.getString(6),Integer.valueOf(resTheArea.getString(7)),Integer.valueOf(resTheArea.getString(8)));
 				simpleArray.add(theObj);
 			}
 			
